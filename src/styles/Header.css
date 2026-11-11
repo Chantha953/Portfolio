@@ -1,0 +1,99 @@
+header {
+    --header-width: 100%;
+    width: var(--header-width);
+    margin: 0 auto;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    width: 600px;
+    justify-content: space-between;
+    background-color: #f0f0f000 !important;
+   -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05);
+    backdrop-filter: blur(0.5px) url(#lg-filter) blur(1px) saturate(1.5) brightness(1.02);
+}
+
+.main-nav .nav-link {
+    border: 1px solid transparent;
+    font-size: 15px;
+    transition: all 0.1s linear;
+    padding: 1px 0px;
+}
+
+.active {
+    /* border: 1px solid dodgerblue !important; */
+    color: dodgerblue !important;
+}
+
+.btnMenu {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    flex-shrink: 0;
+
+    .iconMenu {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        transition: transform 0.2s linear;
+
+        &:active {
+            transform: rotateX(80deg);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        flex-direction: column;
+        justify-content: center !important;
+        border-radius: 0;
+        background: #e6e6e600;
+        box-shadow: none;
+        transition:
+            height 0.25s ease,
+            opacity 0.25s ease,
+            visibility 0.25s ease;
+        gap: 50px;
+        z-index: -1;
+    }
+
+    .nav-bar.open {
+        height: 100dvh;
+        padding: 80px 0;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        flex-direction: column;
+        justify-content: center !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: none !important;
+        background-color: white !important;
+        border-radius: 0px !important;
+    }
+
+    .profile {
+        max-width: 290px !important;
+    }
+
+    .btnHireMe {
+        width: max-content;
+    }
+}
