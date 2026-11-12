@@ -15,8 +15,8 @@ header {
     width: 600px;
     justify-content: space-between;
     background-color: #f0f0f000 !important;
-   -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05);
-    backdrop-filter: blur(0.5px) url(#lg-filter) blur(1px) saturate(1.5) brightness(1.02);
+    -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05);
+    backdrop-filter: blur(0.3px) url(#lg-filter) blur(0.4px) saturate(1.5) brightness(1.02);
 }
 
 .main-nav .nav-link {
@@ -89,8 +89,17 @@ header {
         border-radius: 0px !important;
     }
 
+    .txtLogo {
+        padding: 0px !important;
+    }
+
     .profile {
         max-width: 290px !important;
+    }
+
+    .btnCv,.btnMenu {
+        backdrop-filter: blur(1.6px) !important;
+        -webkit-backdrop-filter: blur(1.6px) !important;
     }
 
     .btnHireMe {
