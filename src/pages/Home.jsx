@@ -1,7 +1,11 @@
 import { FaTelegramPlane } from "react-icons/fa";
-import { FaArrowRight, FaFacebookF, FaInstagram } from "react-icons/fa6";
+import { FaArrowRight, FaFacebookF, FaInstagram, FaCode, FaHeart } from "react-icons/fa6";
+import { HiLightBulb } from "react-icons/hi";
+import { IoIosRocket, IoMdHeart } from "react-icons/io";
+import { TiHeartFullOutline } from "react-icons/ti";
 import { FiGithub } from "react-icons/fi";
 import profile from "../assets/images/profile.png";
+import CardabtMe from "../components/CardabtMe";
 const Home = () => {
     return (
         <main>
@@ -11,7 +15,7 @@ const Home = () => {
                         <div>
                             <section>
                                 <span className="fw-medium fs-5 shadow-item px-3 py-0">Hello, I'm</span>
-                                <h1 className="text-uppercase my-2">Rey Chantha</h1>
+                                <h1 className="text-uppercase my-2 fw-bold">Rey Chantha</h1>
                                 <span className="text-primary" style={{ fontSize: "18px" }}>Full-Stack Developer</span>
                                 <p className="mt-3" style={{ fontSize: "17px" }}>
                                     A passionate and motivated developer who enjoys creating innovative solutions, exploring different areas of technology,
@@ -100,6 +104,34 @@ const Home = () => {
                             />
                         </div>
                     </article>
+                </div>
+            </section>
+            <section>
+                <div className="row">
+                    <article className="col-12 col-md-6 sectionAbtMe">
+                        <span className="fw-medium fs-5 shadow-item px-3 py-0 text-primary">About Me</span>
+                        <h1 className="fw-bold mt-3">Turning Ideas</h1>
+                        <div className="d-flex align-items-center">
+                            <h1 className="fw-bold">Into</h1>
+                            <h1 className="ms-2 fw-bold text-primary">Inovation</h1>
+                        </div>
+                        <p>
+                            I'm Rey Chantha, a Computer Science student who loves building web and mobile applications. I enjoy learning new technologies and solving challenging problems.
+                        </p>
+                        <button className="py-1 px-3 btn rounded-5 border border-primary text-primary">View More
+                            <FaArrowRight className="icon ms-1 text-primary" size={13} />
+                        </button>
+                    </article>
+
+                    <article className="col-12 col-md-6 mainCardabtMe">
+                        <div className="cardGridabtMe">
+                            <CardabtMe icon={IoIosRocket} title="Build" subtitle="Modern App" />
+                            <CardabtMe icon={FaCode} title="Keep" subtitle="Learning" />
+                            <CardabtMe icon={HiLightBulb} title="Solve" subtitle="Problems" />
+                            <CardabtMe icon={TiHeartFullOutline} title="Grow" subtitle="Together" />
+                        </div>
+                    </article>
+
                 </div>
             </section>
         </main>

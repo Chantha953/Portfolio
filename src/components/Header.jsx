@@ -24,12 +24,12 @@ const Header = () => {
     return (
         <header className="container d-flex justify-content-between align-items-center">
             <div className="rounded-5">
-                <a href="/" className="liquid-glass-bg txtLogo rounded-5 text-name text-decoration-none text-black fw-medium" style={{padding :"5.5px 16px"}}>
+                <a href="/" className="rounded-5 text-name text-decoration-none text-black fw-medium">
                     Rey Chantha &lt;/&gt;
                 </a>
             </div>
             <nav className="main-nav m-0" aria-label="Main navigation">
-                <ul className={`nav-bar d-flex align-items-center list-unstyled bg-transparent px-1 py-1 m-0 border rounded-5 ${menuOpen ? "open" : ""}`}>
+                <ul className={`nav-bar glassmorphism-bg d-flex align-items-center list-unstyled bg-transparent px-1 py-1 m-0 border ${menuOpen ? "open" : ""}`}>
                     <li className="nav-item">
                         <NavLink className="nav-link fw-medium px-4 rounded-5 text-decoration-none" to="/" end>Home</NavLink>
                     </li>
@@ -48,10 +48,10 @@ const Header = () => {
                 </ul>
             </nav>
             <div className="header-cta d-flex justify-content-between align-items-center gap-3">
-                <button className="liquid-glass-bg btn btnCv border fw-medium rounded-5 d-flex justify-content-center align-items-center" style={{padding :"5.5px 16px"}}><HiDownload className="me-1" size={18} />
+                <button className="glassmorphism-bg btn btnCv border fw-medium rounded-5 d-flex justify-content-center align-items-center" style={{padding :"5.5px 16px"}}><HiDownload className="me-1" size={18} />
                     Download CV</button>
                 <button
-                    className="liquid-glass-bg btn border text-white rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"
+                    className="glassmorphism-bg btn border text-white rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"
                     onClick={handleMenu}
                 >
                     {menuOpen ? (
