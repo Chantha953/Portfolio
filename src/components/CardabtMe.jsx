@@ -2,7 +2,7 @@
 const CardabtMe = ({ icon: Icon, title, subtitle }) => {
     return (
         <article>
-            <div className="shadow-item cardItemabtMe d-flex justify-content-center align-items-center rounded-5">
+            <div className="shadow-item cardItemabtMe d-flex justify-content-center align-items-center rounded-4">
                 <div>
                     {Icon && (
                         <div className="d-flex justify-content-center mb-3 text-primary">

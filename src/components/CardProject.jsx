@@ -7,13 +7,14 @@ import project5 from "../assets/images/project5.png";
 import project6 from "../assets/images/project6.png";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const projects = [project1, project5, project3,project4,project2,project6];
 
 const CardProject = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState("next");
-
+    const navigate = useNavigate();
     const handleSlide = (step) => {
         setDirection(step > 0 ? "next" : "prev");
 
@@ -43,6 +44,7 @@ const CardProject = () => {
                         src={projects[currentIndex]}
                         alt={`Project ${currentIndex + 1}`}
                         className="project-image"
+                        onClick={()=>navigate("/skills")}
                     />
                 </div>
             </div>
