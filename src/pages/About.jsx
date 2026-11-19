@@ -1,6 +1,18 @@
-import { FaArrowRight, FaFacebookF, FaInstagram, FaTelegramPlane } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
-import profile from "../assets/images/profile.png";
+import "../styles/About.css";
+import {
+  FaUser,
+  FaMapMarkerAlt,
+  FaGraduationCap,
+  FaCalendarAlt,
+} from "react-icons/fa";
+import { FaCode, FaRegHeart } from "react-icons/fa6";
+import { IoRocketOutline } from "react-icons/io5";
+import { RiBrain2Line } from "react-icons/ri";
+import { FaRegUser } from "react-icons/fa";
+import profile from "../assets/images/profileAbt.png";
+import MyInterests from "../components/MyInterests";
+import Journey from "../components/Journey";
+import WhatIDo from "../components/WhatIdo";
 const About = () => {
   return (
     <main>
@@ -9,71 +21,19 @@ const About = () => {
           <article className="col-12 col-md-6 d-flex justify-content-start align-items-center info" style={{ height: "100vh" }}>
             <div>
               <section>
-                <span className="shadow-item py-1 px-2 fs-5 fw-medium">About Me</span>
-                <h1 className="my-2 fw-bold">I'm Rey Chantha</h1>
-                <span className="text-primary fw-medium" style={{ fontSize: "18px" }}>Full-Stack Developer</span>
-                <p className="mt-2" style={{ fontSize: "17px" }}>
-                  I’m a dedicated IT student with a strong interest in software development and system technologies. I enjoy learning how applications work, solving technical challenges, and transforming concepts into functional projects. Through hands-on practice and continuous learning, I aim to strengthen my skills and build software that is useful, reliable, and user-friendly.
+                <span className="fs-6 text-uppercase fw-medium text-primary" style={{ letterSpacing: "3px" }}>About Me</span>
+                <div className="d-flex align-items-center">
+                  <h1 className="fw-bold">Get to Know</h1>
+                  <h1 className="fw-bold ms-2 text-primary">Me</h1>
+                </div>
+                <p style={{ fontSize: "17px" }}>
+                  I’m Rey Chantha, a dedicated <span className="fw-bold">Full-Stack Developer</span> with a passion for building innovative and practical digital solutions. I enjoy creating seamless user experiences, exploring modern technologies, and continuously developing my skills to turn ideas into impactful applications.
                 </p>
               </section>
-              <section className="mainSocial d-flex align-items-center gap-4 mt-4">
-                <a
-                  href="https://www.facebook.com/rey.chantha.2025"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btnSocial text-black shadow-item d-flex justify-content-center align-items-center"
-                  data-tooltip="Facebook"
-                  aria-label="Facebook"
-                >
-                  <FaFacebookF className="iconSocail" size={18} />
-                </a>
-
-                <a
-                  href="https://t.me/Rey_Chantha"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btnSocial text-black shadow-item d-flex justify-content-center align-items-center"
-                  data-tooltip="Telegram"
-                  aria-label="Telegram"
-                >
-                  <FaTelegramPlane className="iconSocail" size={20} />
-                </a>
-
-                <a
-                  href="https://www.instagram.com/rey_chantha/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btnSocial text-black shadow-item d-flex justify-content-center align-items-center"
-                  data-tooltip="Instagram"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram className="iconSocail" size={20} />
-                </a>
-
-                <a
-                  href="https://github.com/Chantha953"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btnSocial text-black shadow-item d-flex justify-content-center align-items-center"
-                  data-tooltip="GitHub"
-                  aria-label="GitHub"
-                >
-                  <FiGithub className="iconSocail" size={20} />
-                </a>
-
-                <span
-                  style={{
-                    width: "1px",
-                    height: "30px",
-                    backgroundColor: "#d8d8d8"
-                  }}
-                />
-
-                <button className="btn btnNav px-4 py-1 shadow-item border-0 rounded-5">
-                  <span className="text d-flex justify-content-center align-items-center gap-1 text-primary">
-                    Hire Me <FaArrowRight className="icon" size={13} />
-                  </span>
-                </button>
+              <section className="mainSocial d-flex align-items-center gap-4 mt-4 flex-wrap">
+                <button className="btn border-0 d-flex align-items-center gap-2 shadow-item rounded-3 fw-medium"><FaCode className="text-primary" /> Developer</button>
+                <button className="btn border-0 d-flex align-items-center gap-2 shadow-item rounded-3 fw-medium"><RiBrain2Line className="text-primary" />Problem Solver</button>
+                <button className="btn border-0 d-flex align-items-center gap-2 shadow-item rounded-3 fw-medium"><IoRocketOutline className="text-primary" />Innovator</button>
               </section>
             </div>
           </article>
@@ -99,6 +59,96 @@ const About = () => {
             </div>
           </article>
         </div>
+      </section>
+
+      <section className="row personal-info-section">
+        <div className="col-12 col-lg-6">
+          <div className="d-flex align-items-center gap-3 mb-4">
+            <span
+              className="shadow-item rounded-3 p-2 d-flex justify-content-center align-items-center"
+            >
+              <FaRegUser className="text-primary" size={23} />
+            </span>
+
+            <h4 className="fw-bold mb-0">
+              Personal Information
+            </h4>
+          </div>
+
+          <div className="personal-info-card shadow-item rounded-4 p-3">
+            {[
+              {
+                icon: FaUser,
+                label: "Full Name",
+                value: "Rey Chantha",
+              },
+              {
+                icon: FaCode,
+                label: "Role",
+                value: "Full-Stack Developer",
+              },
+              {
+                icon: FaMapMarkerAlt,
+                label: "Location",
+                value: "Phnom Penh, Cambodia",
+              },
+              {
+                icon: FaGraduationCap,
+                label: "Education",
+                value: "Information Technology (IT)",
+              },
+              {
+                icon: FaCalendarAlt,
+                label: "Experience",
+                value: "Learning & Building",
+              },
+            ].map((item, index, arr) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.label}
+                  className={`personal-info-row ${index !== arr.length - 1
+                    ? "personal-info-border"
+                    : ""
+                    }`}
+                >
+                  <span className="personal-info-icon">
+                    <Icon />
+                  </span>
+
+                  <span className="personal-info-label">
+                    {item.label}
+                  </span>
+
+                  <span className="personal-info-value">
+                    {item.value}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="col-12 col-lg-6">
+          <div className="d-flex align-items-center gap-3 mb-4 ps-fav">
+            <span
+              className="shadow-item rounded-3 p-2 d-flex justify-content-center align-items-center"
+            >
+              <FaRegHeart className="text-primary" size={23} />
+            </span>
+
+            <h4 className="fw-bold mb-0">
+              Personal Favorites
+            </h4>
+          </div>
+          <MyInterests />
+        </div>
+      </section>
+      <section>
+        <Journey />
+      </section>
+      <section className="my-5">
+        <WhatIDo/>
       </section>
     </main>
   )

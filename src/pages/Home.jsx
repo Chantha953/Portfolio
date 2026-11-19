@@ -4,7 +4,7 @@ import { HiLightBulb } from "react-icons/hi";
 import { IoIosRocket, IoMdHeart } from "react-icons/io";
 import { TiHeartFullOutline } from "react-icons/ti";
 import { FiGithub } from "react-icons/fi";
-import profile from "../assets/images/profile.png";
+import profile from "../assets/images/profileHome.png";
 import CardabtMe from "../components/CardabtMe";
 import CardTechnologies from "../components/CardTechnologies";
 import html from "../assets/images/html.png"
@@ -200,7 +200,7 @@ const Home = () => {
                     <CardProject />
                 </article>
             </section>
-            <section className="row align-items-center pb-5 mainContact" style={{ transform: "translateY(12rem)" }}>
+            <section className="row align-items-center pb-5 mainContact" style={{marginTop : "10rem"}}>
                 <article className="col-12 col-md-6">
                     <img src={contact} alt="" style={{ width: "70%" }} />
                 </article>

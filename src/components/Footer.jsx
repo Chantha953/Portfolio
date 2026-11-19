@@ -3,9 +3,9 @@ import { FiGithub } from "react-icons/fi";
 import { LiaCopyrightSolid } from "react-icons/lia";
 const Footer = () => {
     return (
-        <footer className="container" style={{transform :"translateY(16rem)", paddingBottom: "8rem"}}>
+        <footer className="container" style={{transform :"", paddingBottom: "5rem"}}>
             <hr className="text-secondary" />
-            <div className="row justify-content-between align-items-center">
+            <div className="row justify-content-between align-items-center mainFooter flex-wrap">
                 <article className="col-12 col-md-6 d-flex align-items-center text-secondary">
                     <LiaCopyrightSolid />
                     <span>2026 Rey Chantha. All Rights Reserved.</span>
