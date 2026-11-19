@@ -246,14 +246,14 @@
     .cardGridabtMe {
         gap: 12px;
     }
-    .mainContact{
-        transform: translateY(20rem) !important;
-    }
 }
 
 @media screen and (max-width : 500px) {
     .project-slider {
         height: 230px;
+    }
+    .mainContact{
+        margin-top: 18rem !important;
     }
 }
 
@@ -272,8 +272,5 @@
     }
     .project-slider {
         height: 190px;
-    }
-     .mainContact{
-        transform: translateY(17rem) !important;
     }
 }
