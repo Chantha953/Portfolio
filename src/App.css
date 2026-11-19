@@ -234,7 +234,7 @@
         height: 280px;
     }
     .mainContact{
-        transform: translateY(18rem) !important;
+        margin-top: 24rem !important;
         text-align: center;
         img{
             width: 80% !important;
