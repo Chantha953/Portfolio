@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/About.css";
 import {
   FaUser,
@@ -15,14 +16,14 @@ import Journey from "../components/Journey";
 import WhatIDo from "../components/WhatIdo";
 const About = () => {
   return (
-    <main>
+    <React.Fragment>
       <section>
         <div className="row home">
           <article className="col-12 col-md-6 d-flex justify-content-start align-items-center info" style={{ height: "100vh" }}>
             <div>
               <section>
                 <span className="fs-6 text-uppercase fw-medium text-primary" style={{ letterSpacing: "3px" }}>About Me</span>
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center mt-1">
                   <h1 className="fw-bold">Get to Know</h1>
                   <h1 className="fw-bold ms-2 text-primary">Me</h1>
                 </div>
@@ -148,9 +149,9 @@ const About = () => {
         <Journey />
       </section>
       <section className="my-5">
-        <WhatIDo/>
+        <WhatIDo />
       </section>
-    </main>
+    </React.Fragment>
   )
 }
 export default About;
